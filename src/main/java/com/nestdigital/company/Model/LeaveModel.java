@@ -12,27 +12,23 @@ public class LeaveModel {
     @Id
     @GeneratedValue
 
-    private int id;
-
+    private  int   id;
+    private  int  empcode;
+    private String date;
+    private String reason;
+    private String status;
     private String type;
-    private int emp_id;
-    private String description;
-
-    public LeaveModel(int id, String type, int emp_id, String description, String applyDate, String leaveDate, int status) {
-        this.id = id;
-        this.type = type;
-        this.emp_id = emp_id;
-        this.description = description;
-        this.applyDate = applyDate;
-        this.leaveDate = leaveDate;
-        Status = status;
-    }
-
-    private String applyDate;
-    private String leaveDate;
-    private int Status;
 
     public LeaveModel() {
+    }
+
+    public LeaveModel(int id, int empcode, String date, String reason, String status, String type) {
+        this.id = id;
+        this.empcode = empcode;
+        this.date = date;
+        this.reason = reason;
+        this.status = status;
+        this.type = type;
     }
 
     public int getId() {
@@ -43,51 +39,43 @@ public class LeaveModel {
         this.id = id;
     }
 
+    public int getEmpcode() {
+        return empcode;
+    }
+
+    public void setEmpcode(int empcode) {
+        this.empcode = empcode;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getReason() {
+        return reason;
+    }
+
+    public void setReason(String reason) {
+        this.reason = reason;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     public String getType() {
         return type;
     }
 
     public void setType(String type) {
         this.type = type;
-    }
-
-    public int getEmp_id() {
-        return emp_id;
-    }
-
-    public void setEmp_id(int emp_id) {
-        this.emp_id = emp_id;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getApplyDate() {
-        return applyDate;
-    }
-
-    public void setApplyDate(String applyDate) {
-        this.applyDate = applyDate;
-    }
-
-    public String getLeaveDate() {
-        return leaveDate;
-    }
-
-    public void setLeaveDate(String leaveDate) {
-        this.leaveDate = leaveDate;
-    }
-
-    public int getStatus() {
-        return Status;
-    }
-
-    public void setStatus(int status) {
-        Status = status;
     }
 }

@@ -33,7 +33,7 @@ public class SecurityController {
 
     @CrossOrigin(origins = "*")
     @GetMapping("/securityView")
-    public List<Security> securityView(@RequestBody Security security) {
+    public List<Security> securityView() {
         return (List<Security>) dao.findAll();
     }
 
